@@ -16,8 +16,8 @@ const Nav = () => {
       <div className="max-w-[1600px] mx-auto flex justify-between items-center">
         <Link to='/'>
         <div className="flex items-center">
-          <img src="./logo.svg" alt="Resume Crafter Logo" />
-          <h1 className="text-xl font-extrabold uppercase text-primary ml-3">
+          <img src="./logo.svg" className="h-6" alt="Resume Crafter Logo" />
+          <h1 className="text-xl font-extrabold uppercase text-primary ml-2">
             Resume Crafter
           </h1>
         </div>

@@ -6,6 +6,7 @@ import LayOut from "../Layout/LayOut";
 import Home from "../Home/Home";
 import Dashboard from "../Dashboard/Dashboard";
 import SingIn from "../Security/SingIn";
+import Resume from "../Resume/Resume";
 
   const router = createBrowserRouter([
     {
@@ -19,6 +20,10 @@ import SingIn from "../Security/SingIn";
         {
             path:'/dashboard',
             element:<Dashboard></Dashboard>
+        },
+        {
+            path:'/resume',
+            element:<Resume></Resume>
         }
       ]
     },

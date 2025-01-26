@@ -11,6 +11,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Button } from "../components/ui/button";
 import { useUser } from "@clerk/clerk-react";
+import { Link } from "react-router-dom";
 
 const AddResume = () => {
     const [openDialog,setOpenDialog]=useState(false)
@@ -36,17 +37,18 @@ const AddResume = () => {
   return (
     <div>
       <div>
-        <div
+        <Link to='/resume'><div
           className="p-14 py-24 border 
         items-center flex 
         justify-center bg-secondary
         rounded-lg h-[280px]
         hover:scale-105 transition-all hover:shadow-md
         cursor-pointer border-dashed"
-          onClick={() => setOpenDialog(true)}
+        //   onClick={() => setOpenDialog(true)}
         >
           <PlusSquare />
-        </div>
+        </div></Link>
+        
       </div>
       <Dialog  open={openDialog} >
        

@@ -1,13 +1,14 @@
 import React from "react";
 import { Button } from "../components/ui/button";
-import { Brain } from "lucide-react";
+import { ArrowRight, Brain } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea"
 
 const Summery = ({ next, setNext }) => {
   return (
     <div className="p-5 shadow-lg rounded-lg border-t-primary border-t-4 mt-10">
       <h2 className="font-bold text-lg">Summery</h2>
       <p>Add Summery for your job title</p>
-      summery <Button onClick={() => setNext(next + 1)}>Next</Button>
+      
       <form className="mt-7" >
         <div className="flex justify-between items-end">
           <label>Add Summery</label>

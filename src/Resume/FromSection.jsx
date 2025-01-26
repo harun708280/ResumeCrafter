@@ -7,6 +7,7 @@ import Exparinace from "../FormSecTon/Exparinace";
 import Education from "../FormSecTon/Education";
 import Skils from "../FormSecTon/Skils";
 import { Navigate } from "react-router-dom";
+import AddResume from "../Dashboard/AddResume";
 
 const FromSection = () => {
   const [next, setNext] = useState(1);
@@ -14,10 +15,9 @@ const FromSection = () => {
     <div>
       <div className="flex justify-between items-center">
         <Button>
-          <Home className="h-10"></Home> 
-          
-            <span className="text-xm font-bold uppercase">Resume Crafter</span>
-          
+          <Home className="h-10"></Home>
+
+          <span className="text-xm font-bold uppercase">Resume Crafter</span>
         </Button>
         <Button>
           {" "}
@@ -26,16 +26,18 @@ const FromSection = () => {
       </div>
 
       {next === 1 ? (
-        <PersonalDetails next={next} setNext={setNext} />
+        <AddResume next={next} setNext={setNext} />
       ) : next === 2 ? (
-        <Summery next={next} setNext={setNext} />
+        <PersonalDetails next={next} setNext={setNext} />
       ) : next === 3 ? (
-        <Exparinace next={next} setNext={setNext} />
+        <Summery next={next} setNext={setNext} />
       ) : next === 4 ? (
-        <Education next={next} setNext={setNext} />
+        <Exparinace next={next} setNext={setNext} />
       ) : next === 5 ? (
-        <Skils next={next} setNext={setNext} />
+        <Education next={next} setNext={setNext} />
       ) : next === 6 ? (
+        <Skils next={next} setNext={setNext} />
+      ) : next === 7 ? (
         <Navigate />
       ) : (
         <p>Invalid Step</p>

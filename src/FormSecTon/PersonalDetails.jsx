@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '../components/ui/button';
 
 import { Input } from "@/components/ui/input"
+import { ArrowRight } from 'lucide-react';
 
 const PersonalDetails = ({next,setNext}) => {
     return (
@@ -43,13 +44,13 @@ const PersonalDetails = ({next,setNext}) => {
                 </div>
             </div>
             <div className='mt-3 flex justify-end'>
-                <Button type="submit"></Button>
+            <Button onClick={() => setNext(next + 1)}>Next <ArrowRight/> </Button>
               
                    
             </div>
         </form>
 
-            <Button onClick={() => setNext(next + 1)}>Next</Button>
+            
         </div>
     );
 };

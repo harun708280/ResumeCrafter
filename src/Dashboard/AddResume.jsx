@@ -13,7 +13,7 @@ import { Button } from "../components/ui/button";
 import { useUser } from "@clerk/clerk-react";
 import { Link } from "react-router-dom";
 
-const AddResume = ({next,setNext}) => {
+const AddResume = () => {
     const [openDialog,setOpenDialog]=useState(false)
     const [resumeTitle,setResumeTitle]=useState()
     const [loading,setLoading]=useState(false);
@@ -36,8 +36,8 @@ const AddResume = ({next,setNext}) => {
 
   return (
     <div>
-      <div className="flex justify-center items-center h-[500px]">
-        {/* <Link to='/resume'><div
+      <div>
+        <Link to='/resume'><div
           className="p-14 py-24 border 
         items-center flex 
         justify-center bg-secondary
@@ -46,10 +46,8 @@ const AddResume = ({next,setNext}) => {
         cursor-pointer border-dashed"
         //   onClick={() => setOpenDialog(true)}
         >
-          
-        </div></Link> */}
-
-        <Button onClick={()=>setOpenDialog(true)} variant='outline' className='text-primary p-24 py-24 border text-xl font-bold' > <PlusSquare />  Add Title This Resume</Button>
+          <PlusSquare />
+        </div></Link>
         
       </div>
       <Dialog  open={openDialog} >
@@ -66,7 +64,7 @@ const AddResume = ({next,setNext}) => {
                 <Button onClick={()=>setOpenDialog(false)} variant="ghost">Cancel</Button>
                 <Button 
                     disabled={!resumeTitle||loading}
-                onClick={()=>{handleAddTitle(),setNext(next+1)}}>
+                onClick={()=>handleAddTitle()}>
                     {loading?
                     <Loader2 className='animate-spin' /> :'Create'   
                 }

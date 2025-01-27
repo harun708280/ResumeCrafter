@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { useResumeInfoContext } from '@/context/DataContext';
 import FromSection from './FromSection';
 import ResumePreview from './ResumePreview';
+import Dummey from '../Data/Dummey';
 const Resume = () => {
-    const [resumeInfo,setResumeInfo]=useState();
+   
+    const [resumeInfo,setResumeInfo]=useState(Dummey);
     
     return (
         

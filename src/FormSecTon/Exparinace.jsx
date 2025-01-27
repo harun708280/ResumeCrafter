@@ -1,7 +1,17 @@
 import React from 'react';
 import { Button } from '../components/ui/button';
+const formField={
+    title:'',
+    companyName:'',
+    city:'',
+    state:'',
+    startDate:'',
+    endDate:'',
+    workSummery:'',
 
+}
 const Exparinace = ({next,setNext}) => {
+
     return (
         <div>
             ex

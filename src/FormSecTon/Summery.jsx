@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "../components/ui/button";
-import { ArrowRight, Brain } from "lucide-react";
+import { ArrowBigLeftDash, ArrowLeftToLine, ArrowRight, Brain } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea"
 
 const Summery = ({ next, setNext }) => {
@@ -27,7 +27,8 @@ const Summery = ({ next, setNext }) => {
           required
           
         />
-        <div className="mt-2 flex justify-end">
+        <div className="mt-2 flex justify-end space-x-2">
+        <Button onClick={() => setNext(next - 1)}> <ArrowLeftToLine></ArrowLeftToLine> Previous  </Button>
         <Button onClick={() => setNext(next + 1)}>Next <ArrowRight/> </Button>
         </div>
       </form>

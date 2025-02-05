@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import RichTextEditor from './RichTextEditor';
+import { ArrowLeftToLine, ArrowRight } from 'lucide-react';
 
 const formField={
     title:'',
@@ -109,7 +110,10 @@ const Exparinace = ({next,setNext}) => {
             <Button disabled={experienceList.length===1} onClick={RemoveExperiance} variant="outline"  className="text-primary"> - Remove</Button>
 
             </div>
-            <Button onClick={() => setNext(next + 1)}>Next</Button>
+            <div className="mt-2 flex justify-end space-x-2">
+        <Button onClick={() => setNext(next - 1)}> <ArrowLeftToLine></ArrowLeftToLine> Previous  </Button>
+        <Button onClick={() => setNext(next + 1)}>Next <ArrowRight/> </Button>
+        </div>
         </div>
         </div>
     </div>

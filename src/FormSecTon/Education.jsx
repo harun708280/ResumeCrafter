@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button } from '../components/ui/button';
 import { Input } from '@/components/ui/input'
 import { Textarea } from "@/components/ui/textarea"
+import { ArrowLeftToLine, ArrowRight } from 'lucide-react';
 const Education = ({next,setNext}) => {
     const [educationalList,setEducationalList]=useState([
         {
@@ -80,10 +81,13 @@ const Education = ({next,setNext}) => {
     <div className='flex justify-between'>
             <div className='flex gap-2'>
             <Button variant="outline" onClick={AddNewEducation} className="text-primary"> + Add More Education</Button>
-            <Button variant="outline" onClick={RemoveEducation} className="text-primary"> - Remove</Button>
+            <Button variant="outline" disabled={educationalList.length===1} onClick={RemoveEducation} className="text-primary"> - Remove</Button>
 
             </div>
-            <Button onClick={() => setNext(next + 1)}>Next</Button>
+            <div className="mt-2 flex justify-end space-x-2">
+        <Button onClick={() => setNext(next - 1)}> <ArrowLeftToLine></ArrowLeftToLine> Previous  </Button>
+        <Button onClick={() => setNext(next + 1)}>Next <ArrowRight/> </Button>
+        </div>
         </div>
     </div>
              
